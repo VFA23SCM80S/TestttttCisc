@@ -168,7 +168,7 @@ YGKFP,204.101.207.140,YGKFP,Concord,Concord,LSP-Concord <LSP-Concord@marriottonl
 PITHW,173.225.48.4,PITHW,Concord,Concord,LSP-Concord <LSP-Concord@marriottonline.onmicrosoft.com>
 JAXRV,12.168.235.131,JAXRV,Concord,Concord,LSP-Concord <LSP-Concord@marriottonline.onmicrosoft.com>
 CLERI,12.168.218.202,CLERI,Concord,Concord,LSP-Concord <LSP-Concord@marriottonline.onmicrosoft.com>
-,,,,DeepBlueCommunications (added to Comcast),LSP-Comcast@marriottonline.onmicrosoft.com
+,,,,DeepBlueCommunications ,LSP-Comcast@marriottonline.onmicrosoft.com
 MADFI,190.57.23.228,MADFI,Esferize,Esferize,Arturo R. Sanz <arsanz@esferize.com>; Eduardo Aparicio <eaparicio@esferize.com>
 MADCU,195.55.124.212,MADCU,Esferize,Esferize,Arturo R. Sanz <arsanz@esferize.com>; Eduardo Aparicio <eaparicio@esferize.com>
 BCNKS,213.0.30.41,BCNKS,Esferize,Esferize,Arturo R. Sanz <arsanz@esferize.com>; Eduardo Aparicio <eaparicio@esferize.com>
@@ -425,10 +425,10 @@ PARAR,193.163.90.140,PARAR,Mikenopa,Mikenopa,Bartosz Puszkiewicz <bartosz.puszki
 PRGWH,197.47.25.34,PRGWH,Mikenopa,Mikenopa,Bartosz Puszkiewicz <bartosz.puszkiewicz@mikenopa.com>; Mikenopa Trio <trio@mikenopa.com>; Gisbert Haas <Gisbert.Haas@mikenopa.com>
 AYTLD,91.93.38.206,AYTLD,Mikenopa,Mikenopa,Bartosz Puszkiewicz <bartosz.puszkiewicz@mikenopa.com>; Mikenopa Trio <trio@mikenopa.com>; Gisbert Haas <Gisbert.Haas@mikenopa.com>
 MILSS,5.96.34.132,MILSS,Mikenopa,Mikenopa,Bartosz Puszkiewicz <bartosz.puszkiewicz@mikenopa.com>; Mikenopa Trio <trio@mikenopa.com>; Gisbert Haas <Gisbert.Haas@mikenopa.com>
-MMJCH,153.156.18.171,MMJCH,NEC,NEC,Hara Kanon(????) <hara.kanon.za@nesic.com>; nesic-mipj@ml.nesic.com; Sakai Masaya(?????) <sakai.masaya.za@nesic.com>
-MMJFJ,153.156.22.84,MMJFJ,NEC,NEC,Hara Kanon(????) <hara.kanon.za@nesic.com>; nesic-mipj@ml.nesic.com; Sakai Masaya(?????) <sakai.masaya.za@nesic.com>
-OSAOW,153.246.67.41,OSAOW,NEC,NEC,Hara Kanon(????) <hara.kanon.za@nesic.com>; nesic-mipj@ml.nesic.com; Sakai Masaya(?????) <sakai.masaya.za@nesic.com>
-TYOEB,125.102.174.53,TYOEB,NEC,NEC,Hara Kanon(????) <hara.kanon.za@nesic.com>; nesic-mipj@ml.nesic.com; Sakai Masaya(?????) <sakai.masaya.za@nesic.com>
+MMJCH,153.156.18.171,MMJCH,NEC,NEC,Hara Kanon <hara.kanon.za@nesic.com>; nesic-mipj@ml.nesic.com; Sakai Masaya <sakai.masaya.za@nesic.com>
+MMJFJ,153.156.22.84,MMJFJ,NEC,NEC,Hara Kanon <hara.kanon.za@nesic.com>; nesic-mipj@ml.nesic.com; Sakai Masaya <sakai.masaya.za@nesic.com>
+OSAOW,153.246.67.41,OSAOW,NEC,NEC,Hara Kanon <hara.kanon.za@nesic.com>; nesic-mipj@ml.nesic.com; Sakai Masaya <sakai.masaya.za@nesic.com>
+TYOEB,125.102.174.53,TYOEB,NEC,NEC,Hara Kanon <hara.kanon.za@nesic.com>; nesic-mipj@ml.nesic.com; Sakai Masaya <sakai.masaya.za@nesic.com>
 MXLFI,201.171.250.123,MXLFI,NimbusNetworks,NimbusNetworks,Rene Villalobos <rvillalobos@nimbusnetworks.com>; Rene Villalobos <rvillalobos@nimbusnetworks.com>
 PIOLC,200.48.32.163,PIOLC,NimbusNetworks,NimbusNetworks,Rene Villalobos <rvillalobos@nimbusnetworks.com>; Rene Villalobos <rvillalobos@nimbusnetworks.com>
 RECPG,187.1.167.148,RECPG,NimbusNetworks,NimbusNetworks,Rene Villalobos <rvillalobos@nimbusnetworks.com>; Rene Villalobos <rvillalobos@nimbusnetworks.com>
@@ -438,7 +438,7 @@ MBSCB,47.44.150.142,MBSCB,Parity,,
 PHLMO,38.123.136.147,PHLMO,Parity,,
 RMGCY,12.162.192.110,RMGCY,Parity,,
 CLELY,74.142.200.94,CLELY,Parity,,
-,,,,Parity (Added to hotspot),Gavian Gough <ggough@paritysolutions.com>; Gressya Reyes <gressya.reyes@hotspotinternational.com>
+,,,,Parity ,Gavian Gough <ggough@paritysolutions.com>; Gressya Reyes <gressya.reyes@hotspotinternational.com>
 ROMWI,195.110.152.0,ROMWI,Quadriga,Quadriga,"Simon.Streten@quadriga.com; Lilley, James <James.Lilley@quadriga.com>; Narayanan, Anantha <anantha.narayanan@quadriga.com>"
 EDIFP,138.248.224.176,EDIFP,Quadriga,Quadriga,"Simon.Streten@quadriga.com; Lilley, James <James.Lilley@quadriga.com>; Narayanan, Anantha <anantha.narayanan@quadriga.com>"
 JKTFA,180.178.103.35,JKTFA,Reivernet,Reivernet,Joseph Deo <joseph.deo@reivernet.com>; matt.fenton@reivernet.com; GNOC.Management <gnoc.management@reivernet.com>

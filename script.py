@@ -42,6 +42,6 @@ merged_data = pd.merge(
     step_5_data, lsp_emails, left_on="u_lsp", right_on="LSP", how="outer"
 )
 
-# Step 4: Save the merged data to a new CSV
+# Step 4: Save the merged data to a new CSV (will overwrite the previous one)
 merged_data.to_csv("merged_LSP_data.csv", index=False)
 print("Merged data saved to 'merged_LSP_data.csv'.")
