@@ -1,9 +1,9 @@
 import pandas as pd
 import requests
 
-# URL of the raw CSV file from your GitHub repo
+# Correct URL for the raw CSV file on GitHub
 github_csv_url = (
-    "https://raw.githubusercontent.com/username/repository/branch/LSP_emails.csv"
+    "https://raw.githubusercontent.com/VFA23SCM80S/Test_Email/master/LSP_emails.csv"
 )
 
 # Step 1: Pull the CSV file from GitHub
@@ -18,7 +18,9 @@ else:
 
 # Step 2: Read the data
 # Local CSV (from step 5)
-step_5_data = pd.read_csv("step_5_data.csv")  # Replace with the actual filename
+step_5_data = pd.read_csv(
+    "Inactive_Network_LSP.csv"
+)  # Replace with the actual filename
 # GitHub CSV
 lsp_emails = pd.read_csv("LSP_emails.csv")
 
