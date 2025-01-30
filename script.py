@@ -289,22 +289,69 @@ def merge_and_create_lsp():
     print(f"File created: {full_path}")  # Print the full path for external capture
 
 
+# def download_lsp_emails():
+#     github_csv_url = "https://raw.githubusercontent.com/VFA23SCM80S/TestttttCisc/master/LSP_emails.csv"
+
+#     try:
+#         response = requests.get(github_csv_url)
+#         if response.status_code == 200:
+#             with open("LSP_emails.csv", "wb") as file:
+#                 file.write(response.content)
+#             print("CSV file downloaded successfully.")
+#         else:
+#             print("Failed to fetch the CSV file from GitHub.")
+#             exit()
+
+#     except requests.exceptions.RequestException as e:
+#         print(f"Error downloading the file from GitHub: {e}")
+#         exit()
+import requests
+import os
+from dotenv import load_dotenv
+
+
 def download_lsp_emails():
-    github_csv_url = "https://raw.githubusercontent.com/VFA23SCM80S/TestttttCisc/master/LSP_emails.csv"
+    """
+    Downloads the LSP_emails.csv file from the specified GitHub repository using a personal access token for authentication.
+    """
+    # Load environment variables from .env file
+    load_dotenv()
+
+    # Retrieve the GitHub token from environment variables
+    github_token = os.getenv("GITHUB_TOKEN")
+    if not github_token:
+        raise ValueError(
+            "GitHub token not found. Please set the GITHUB_TOKEN environment variable."
+        )
+
+    # GitHub repository details
+    github_csv_url = "https://git.marriott.com/Network-DevOps/Mind.Cisco-Umbrella-Notification/blob/main/LSP_Contact/LSP_emails.csv"
+    # github_csv_url = "https://raw.githubusercontent.com/VFA23SCM80S/TestttttCisc/master/LSP_emails.csv"
+    local_filename = "LSP_emails.csv"
+
+    # Set up headers for authentication
+    headers = {"Authorization": f"token {github_token}"}
 
     try:
-        response = requests.get(github_csv_url)
-        if response.status_code == 200:
-            with open("LSP_emails.csv", "wb") as file:
-                file.write(response.content)
-            print("CSV file downloaded successfully.")
-        else:
-            print("Failed to fetch the CSV file from GitHub.")
-            exit()
+        # Fetch the CSV file from GitHub
+        response = requests.get(github_csv_url, headers=headers)
+        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
 
-    except requests.exceptions.RequestException as e:
-        print(f"Error downloading the file from GitHub: {e}")
-        exit()
+        # Write the content to a local file
+        with open(local_filename, "wb") as file:
+            file.write(response.content)
+        print(f"CSV file downloaded successfully and saved as {local_filename}")
+
+    except requests.exceptions.HTTPError as http_err:
+        print(f"HTTP error occurred: {http_err}")
+    except requests.exceptions.ConnectionError as conn_err:
+        print(f"Connection error occurred: {conn_err}")
+    except requests.exceptions.Timeout as timeout_err:
+        print(f"Timeout error occurred: {timeout_err}")
+    except requests.exceptions.RequestException as req_err:
+        print(f"An error occurred: {req_err}")
+    except Exception as err:
+        print(f"An unexpected error occurred: {err}")
 
 
 def merge_and_clean_data():
@@ -373,28 +420,28 @@ def merge_and_clean_data():
 def main():
     access_token = get_umbrella_access_token(CLIENT_ID, CLIENT_SECRET)
 
-    # Step 1: Retrieve umbrella networks and export to CSV
-    list_umbrella_networks(access_token, "umbrella_networks.csv")
+    # # Step 1: Retrieve umbrella networks and export to CSV
+    # list_umbrella_networks(access_token, "umbrella_networks.csv")
 
-    # Step 2: Retrieve top identities and export to CSV with retry mechanism
-    fetch_top_identities(access_token, "top_identities.csv")
+    # # Step 2: Retrieve top identities and export to CSV with retry mechanism
+    # fetch_top_identities(access_token, "top_identities.csv")
 
-    # Step 3: Fetch ServiceNow data and store in CSV
-    fetch_snow_data()
+    # # Step 3: Fetch ServiceNow data and store in CSV
+    # fetch_snow_data()
 
-    # Step 4: Compare and filter networks
-    compare_and_filter_networks()
+    # # Step 4: Compare and filter networks
+    # compare_and_filter_networks()
 
-    # Step 5: Merge inactive networks with ServiceNow data and create LSP CSV
-    merge_and_create_lsp()
+    # # Step 5: Merge inactive networks with ServiceNow data and create LSP CSV
+    # merge_and_create_lsp()
 
     # Step 6: Download 'LSP_emails.csv' from GitHub
     download_lsp_emails()
 
-    # Step 7: Merge and clean data and store it in a variable
-    data = merge_and_clean_data()
-    print("Merged and cleaned data")
-    print("data")
+    # # Step 7: Merge and clean data and store it in a variable
+    # data = merge_and_clean_data()
+    # print("Merged and cleaned data")
+    # print("data")
     logging.info("Process completed successfully.")
 
 
